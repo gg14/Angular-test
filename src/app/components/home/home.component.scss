@@ -1,0 +1,103 @@
+@import "src/assets/css/mixing";
+@import "src/assets/css/_vars.scss";
+
+:host {
+  // Botones
+  button {
+    height: 36px;
+    line-height: 27px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    color: #757575;
+    cursor: default;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 11px 4px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-align: center;
+
+    &:hover {
+      background-color: #f8f8f8;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      color: #222;
+    }
+  }
+
+
+  .container {
+    height: calc(100vh - 100px);
+  }
+
+  // Search container
+
+  .search {
+    flex: 1;
+
+    .brand-logo {
+      img {
+        height: 92px;
+        width: 272px;
+      }
+    }
+
+    &__container {
+      display: block;
+      padding-top: 20px;
+      width: 100%;
+
+      form {
+        width: 100%;
+        @include centrar;
+
+        .input-field {
+          display: inline-flex;
+          max-width: 582px;
+          width: 100%;
+          padding: 7px 0;
+          border: 1px solid #dfe1e5;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+          &:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+          }
+
+          input {
+            border: none;
+            background: #fff;
+            display: flex;
+            height: 28px;
+            padding: 0 10px;
+            width: calc(100% - 30px);
+          }
+        }
+      }
+
+      .voice-icon {
+        display: block;
+        background: url(https://nexsmedia.com/guillermo/Google_mic.svg) no-repeat -3px 0;
+        background-size: 24px 24px;
+        height: 24px;
+        width: 24px;
+        padding-right: 10px;
+      }
+
+      .search-nav {
+        @include centrar;
+        padding-top: 18px;
+      }
+    }
+  }
+}
+
+.change-btn {
+  font-style: italic;
+  color: red !important;
+  &:hover {
+    color: red !important;
+  }
+}

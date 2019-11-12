@@ -1,0 +1,25 @@
+<div class="container"
+     fxLayout
+     fxLayoutAlign="center center">
+  <div class="search"
+       fxLayout="column"
+       fxLayoutAlign="center center">
+    <div class="brand-logo">
+      <img src="https://nexsmedia.com/guillermo/goog-logo.png" alt="logo">
+    </div>
+    <div class="search__container">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <a href="#" class="voice-link"><span class="voice-icon"></span></a>
+        </div>
+      </form>
+      <div class="search-nav">
+        <button type="button"
+                (click)="onClickChangeClass()"
+                [ngClass]="eval ? 'change-btn' : ''">Google Search</button>
+        <button type="button">I'm Feeling Lucky</button>
+      </div>
+    </div>
+  </div>
+</div>
